@@ -4,7 +4,8 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'h23yjMUkK_4jNOSitinFk0sQsD8mGQA1MsDp8On8m-e-L1M1kbX1G8PHY-yPtNEI'
 DEBUG = True
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['hongmin010.pythonanywhere.com']
+CSRF_TRUSTED_ORIGINS = ['https://hongmin010.pythonanywhere.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',

@@ -1,4 +1,3 @@
-
 from django.conf import settings
 from django.db import models
 from django.utils import timezone
@@ -10,7 +9,7 @@ class Post(models.Model):
     content = models.TextField(blank=True)   # compatibility
     image = models.ImageField(upload_to='posts/%Y/%m/%d/', blank=True, null=True)
     created_date = models.DateTimeField(default=timezone.now)
-    published_date = models.DateTimeField(blank=True, null=True)
+    published_date = models.DateTimeField(default=timezone.now, blank=True, null=True)
 
     class Meta:
         ordering = ['-created_date']
